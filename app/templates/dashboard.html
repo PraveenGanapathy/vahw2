@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Dashboard Header -->
+<div class="dashboard-container">
+    <!-- Header Section -->
+    <header class="dashboard-header">
+        <div class="header-content">
+            <div class="title-block">
+                <h1>Adidas Sales Dataset</h1>
+                <p class="subtitle">Sales Distribution Across United States</p>
+            </div>
+            
+            <div class="state-display">
+                <span id="current-state">Entire US</span>
+                <button id="reset-view" class="reset-btn">Reset View</button>
+            </div>
+            
+            <div class="dataset-info">
+                <p>Interactive visualization of sales trends, product performance, and regional distribution</p>
+            </div>
+            
+            
+        </div>
+    </header>
+    
+
+    <!-- Mobile Warning -->
+    <div class="mobile-warning">
+        <p>⚠️ Please rotate your device to landscape mode for the best viewing experience.</p>
+    </div>
+
+    <!-- Main Grid Layout -->
+    <div class="dashboard-grid">
+        <div class="viz-card">
+            
+            <div id="retailer-bar"></div>
+        </div>
+        
+        <div class="viz-card">
+            <h2>Sales Metrics</h2>
+            <div id="radar-chart"></div>
+        </div>
+        
+        <div class="viz-card">
+            
+            <div id="product-chart"></div>
+        </div>
+        
+        <div class="viz-card">
+            <h2 >Regional Performance</h2>
+            <div id="map-chart"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+        <div class="tech-stack">
+            <p>Built with: 
+                <span class="tech-item">D3.js</span>
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Flask</span>
+            </p>
+        </div>
+        <div class="data-source">
+            <p>Data Source: <a href="https://www.kaggle.com/datasets/heemalichaudhari/adidas-sales-dataset" target="_blank">Kaggle - Adidas Sales Dataset</a></p>
+        </div>
+
+    </footer>
+</div>
+
+{% endblock %}

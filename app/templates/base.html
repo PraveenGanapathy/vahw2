@@ -1,0 +1,32 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script type="module" src="{{ url_for('static', filename='js/map-chart.js') }}"></script>
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Chart Scripts -->
+    <script src="{{ url_for('static', filename='js/radar-chart.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/product-chart.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/retailer-bar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/map-chart.js') }}"></script>
+    
+    <!-- Main Script (must be last) -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
